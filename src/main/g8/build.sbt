@@ -61,5 +61,3 @@ Global / scalacOptions := Seq(
   "-Werror",
   "-feature",
 )
-
-

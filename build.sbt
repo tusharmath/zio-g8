@@ -4,10 +4,11 @@
 lazy val root = (project in file("."))
   .enablePlugins(ScriptedPlugin)
   .settings(
-    name        := "ZIOTemplate",
-    Test / test := {
+    name           := "ZIOTemplate",
+    Test / test    := {
       val _ = (Test / g8Test).toTask("").value
     },
+    publish / skip := true,
     scriptedLaunchOpts ++= List(
       "-Xms1024m",
       "-Xmx1024m",
