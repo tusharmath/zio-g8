@@ -1,5 +1,7 @@
 package com.tusharmath
 
-object Example extends ZIOAppDefault {
-  override def run: ZIO[ZEnv, Nothing, Int] = ???    
+import zio._
+
+object Stub extends ZIOAppDefault {
+  def run = ???
 }

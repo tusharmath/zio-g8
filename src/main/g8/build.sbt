@@ -2,14 +2,7 @@
 ThisBuild / organization := "com.tusharmath"
 ThisBuild / scalaVersion := "3.1.1"
 ThisBuild / semanticdbEnabled := true
-ThisBuild / onChangedBuildSource := ReloadOnSourceChanges
-
-ThisBuild / scalacOptions := Seq(
-  "-Ywarn-unused",
-  "-Werror",
-  "-feature",
-  "-language:reflectiveCalls"
-)
+Global / onChangedBuildSource := ReloadOnSourceChanges
 
 ThisBuild / versionScheme         := Some("early-semver")
 ThisBuild / githubWorkflowTargetTags ++= Seq("v*")
@@ -54,10 +47,4 @@ lazy val root = (project in file(".")).settings(
       Dependencies.ZIOTestSbt,
     ),
     testFrameworks += new TestFramework("zio.test.sbt.ZTestFramework"),
-)
-
-Global / scalacOptions := Seq(
-  "-Ywarn-unused",
-  "-Werror",
-  "-feature",
 )
